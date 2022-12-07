@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.SchoolListActivity">
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/height_size_50"
+       android:layout_margin="@dimen/margin_size_10"
+       app:cardBackgroundColor="@color/white"
+       app:cardCornerRadius="@dimen/radius_size_28">
+      <EditText
+          android:id="@+id/etSearch"
+          android:layout_gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:paddingStart="@dimen/padding_size_20"
+          android:drawablePadding="@dimen/padding_size_20"
+          android:drawableEnd="@drawable/ic_baseline_search_24"
+          android:background="@null"
+          android:hint="@string/search_school_name"
+          tools:ignore="RtlSymmetry" />
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rvList"
+       android:orientation="vertical"
+       tools:listitem="@layout/school_list_item"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+</LinearLayout>

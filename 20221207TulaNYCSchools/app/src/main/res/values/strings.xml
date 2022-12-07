@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">20221207-[tula]-NYCSchools</string>
+    <string name="sat_writing_avg_score">Sat Writing Avg Score</string>
+    <string name="sat_math_avg_score">Sat Math Avg Score</string>
+    <string name="critical_avg_score">Critical Reading Avg Score</string>
+    <string name="number_of_sat_tackers">Number of Sat Test Tackers</string>
+    <string name="label">Label</string>
+    <string name="score">Score</string>
+    <string name="language">Language</string>
+    <string name="website">Website</string>
+    <string name="email">Email</string>
+    <string name="total_students">Total Students</string>
+    <string name="city">City</string>
+    <string name="attendance_rate">Attendance Rate</string>
+    <string name="search_school_name">Search School By Name</string>
+</resources>

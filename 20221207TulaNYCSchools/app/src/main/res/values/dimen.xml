@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_size_28">28dp</dimen>
+    <dimen name="radius_size_5">5dp</dimen>
+    <dimen name="radius_size_10">10dp</dimen>
+    <dimen name="height_size_50">50dp</dimen>
+    <dimen name="height_size_30">30dp</dimen>
+    <dimen name="line_height_1">1dp</dimen>
+    <dimen name="line_height_2">2dp</dimen>
+
+    //Text Size
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="medium_text_size">14sp</dimen>
+    <dimen name="large_text_size">18sp</dimen>
+    //Padding Margin
+    <dimen name="padding_size_5">5dp</dimen>
+    <dimen name="padding_size_10">10dp</dimen>
+    <dimen name="padding_size_20">20dp</dimen>
+    <dimen name="margin_size_5">5dp</dimen>
+    <dimen name="margin_size_10">10dp</dimen>
+
+</resources>
