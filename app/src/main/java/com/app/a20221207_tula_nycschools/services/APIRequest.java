@@ -17,19 +17,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-
 public class APIRequest {
-
     private RequestQueue requestQueue;
     String base_url="https://data.cityofnewyork.us/resource/";
     private boolean cached = true;
     private Context context;
+
     public APIRequest(Context context) {
         this.requestQueue = Volley.newRequestQueue(context);
         this.context = context;
     }
-//json array request for fetching data
-   public <T> void getArrayRequest(String url, final Class clazz, final ArrayCallback<T> callback) {
+
+    // JSON array request for fetching data
+    public <T> void getArrayRequest(String url, final Class clazz, final ArrayCallback<T> callback) {
        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, base_url+url, null, response -> {
            Log.e("response",response.toString()+"->");
            if (callback != null) {
@@ -42,23 +42,25 @@ public class APIRequest {
        }) {
            @Override
            public Map<String, String> getHeaders() throws AuthFailureError {
-               Map<String, String> map=new HashMap<>();
+               Map<String, String> map = new HashMap<>();
                return map;
            }
        };
        addRequest(request);
-   }
-//set error message in case api did not return data successfully
+    }
+
+    // Set error message in case api did not return data successfully
     private void setErrorMsg(VolleyError error, ArrayCallback callback) {
         NetworkResponse response = error.networkResponse;
         if (response != null) {
             String errorMsg = new String(error.networkResponse.data).replaceAll("^\"|\"$", "");
             callback.onError(errorMsg);
         } else {
-        callback.onError("Something Went Wrong...");
+            callback.onError("Something Went Wrong...");
         }
-}
-//set request properties
+    }
+
+    // Set request properties
     private void addRequest(Request request) {
         long timeout = TimeUnit.SECONDS.toMillis(60);
         int maxRetries = DefaultRetryPolicy.DEFAULT_MAX_RETRIES;
@@ -68,5 +70,4 @@ public class APIRequest {
         request.setShouldCache(true);
         requestQueue.add(request);
     }
-
 }

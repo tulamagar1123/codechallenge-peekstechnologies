@@ -1,9 +1,10 @@
 package com.app.a20221207_tula_nycschools.model;
 
 public class SchoolModel {
-    private String school_name,phone_number,overview_paragraph,school_email,website,num_of_sat_test_takers
-            ,sat_critical_reading_avg_score,sat_math_avg_score,sat_writing_avg_score,dbn,
-            attendance_rate,school_sports,total_students,city,language_classes,location,latitude,longitude;
+    private String school_name, phone_number, overview_paragraph, school_email, website,
+            num_of_sat_test_takers, sat_critical_reading_avg_score, sat_math_avg_score,
+            sat_writing_avg_score, dbn, attendance_rate, school_sports, total_students,
+            city, language_classes, location, latitude, longitude;
 
     public String getLocation() {
         return location;
@@ -72,7 +73,6 @@ public class SchoolModel {
     public String getLatitude() {
         return latitude;
     }
-
     public String getLongitude() {
         return longitude;
     }

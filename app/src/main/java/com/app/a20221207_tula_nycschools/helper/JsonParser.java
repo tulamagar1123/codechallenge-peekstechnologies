@@ -8,12 +8,12 @@ import org.json.JSONObject;
 import java.util.List;
 
 public class JsonParser {
-
     private static Gson gson = new Gson();
 
     public static <T> List<T> toList(String json, Class<T> typeClass) {
         return gson.fromJson(json, new ListOfJson<>(typeClass));
     }
+
     public static <T> T toObject(String json, Class clazz) {
         try {
             return (T) gson.fromJson(json, clazz);
@@ -28,6 +28,4 @@ public class JsonParser {
         JSONObject jsonObject = new JSONObject(jsonData);
         return jsonObject;
     }
-
-
 }

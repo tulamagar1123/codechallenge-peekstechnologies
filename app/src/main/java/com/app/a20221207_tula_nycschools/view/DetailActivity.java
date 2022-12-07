@@ -33,7 +33,7 @@ public class DetailActivity extends AppCompatActivity {
         init();
         //Api Calling
         getSchoolDetail();
-      }
+    }
 
     private void init() {
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
@@ -43,6 +43,7 @@ public class DetailActivity extends AppCompatActivity {
             getSupportActionBar().setTitle("School Detail");
         }
     }
+
     private void getSchoolDetail() {
         Utils.showProgressDialog(context);
         SchoolDAO.getInstance(context).getDetail(new ArrayCallback<SchoolModel>() {
@@ -74,12 +75,10 @@ public class DetailActivity extends AppCompatActivity {
                 });
             }
 
-
             @Override
             public void onError(String msg) {
                 Utils.dismissProgressDialog();
                 Log.e("onError", msg + "->");
-
             }
         });
     }
@@ -102,6 +101,5 @@ public class DetailActivity extends AppCompatActivity {
         binding.tvCity.setText(model.getCity());
         binding.tvAttendance.setText(model.getAttendance_rate());
     }
-
 
 }

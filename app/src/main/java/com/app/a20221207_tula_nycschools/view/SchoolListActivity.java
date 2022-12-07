@@ -27,7 +27,6 @@ public class SchoolListActivity extends AppCompatActivity {
         init();
         //Api Calling
         getSchoolList();
-
     }
 
     private void getSchoolList() {

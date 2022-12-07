@@ -12,22 +12,19 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-
-
 public class Utils {
     private static AlertDialog dialog;
 
     @SuppressLint("SetTextI18n")
     public static void showProgressDialog(Context activity) {
-
         if (dialog != null && dialog.isShowing())
             return;
+
         int llPadding = 30;
         LinearLayout ll = new LinearLayout(activity);
         ll.setBackgroundColor(Color.parseColor("#FFFFFF"));
         ll.setOrientation(LinearLayout.HORIZONTAL);
         ll.setPadding(40, llPadding, llPadding, llPadding);
-//        ll.setGravity(Gravity.CENTER);
         LinearLayout.LayoutParams llParam = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -72,8 +69,4 @@ public class Utils {
         if (dialog != null && dialog.isShowing())
             dialog.dismiss();
     }
-
-
-
-
 }

@@ -4,8 +4,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class ListOfJson<T> implements ParameterizedType
-{
+public class ListOfJson<T> implements ParameterizedType {
     private Class<?> wrapped;
 
     public ListOfJson(Class<T> wrapper)

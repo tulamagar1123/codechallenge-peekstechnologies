@@ -20,10 +20,10 @@ import java.util.List;
 public class SchoolListAdapter extends RecyclerView.Adapter<SchoolListAdapter.VHolder> {
     Context context;
     List<SchoolModel> list;
+
     public SchoolListAdapter(Context context, List<SchoolModel> list) {
         this.context = context;
         this.list = list;
-
     }
 
     @NonNull
@@ -46,7 +46,7 @@ public class SchoolListAdapter extends RecyclerView.Adapter<SchoolListAdapter.VH
             public void onClick(View view) {
                context.startActivity(new Intent(context, DetailActivity.class).putExtra("data",new Gson().toJson(model)));
            }
-       });
+        });
         holder.tvLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,9 +65,7 @@ public class SchoolListAdapter extends RecyclerView.Adapter<SchoolListAdapter.VH
                context.startActivity(callIntent);
            }
        });
-
     }
-
 
     @Override
     public int getItemCount() {
@@ -85,5 +83,4 @@ public class SchoolListAdapter extends RecyclerView.Adapter<SchoolListAdapter.VH
             tvParagraph = itemView.findViewById(R.id.tvParagraph);
         }
     }
-
 }
